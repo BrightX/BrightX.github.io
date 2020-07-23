@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三列布局</title>
+    <style>
+        ::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        html {
+            width: 100%;
+            min-width: 1024px;
+            /*background-color: #404143;*/
+            background-color: #3C3F41;
+        }
+
+        body {
+            width: 1024px;
+            padding: 10px;
+            margin: auto;
+            background-color: #ffffff;
+        }
+
+        nav {
+            line-height: 0;
+        }
+
+        nav ul {
+            display: inline-flex;
+            line-height: 100px;
+        }
+
+        nav ul > li {
+            list-style: none;
+            margin-left: 2em;
+        }
+
+        footer {
+            margin: 10px;
+            line-height: 2em;
+            text-align: center;
+            color: #777777;
+        }
+
+        footer a {
+            margin: 0 15px;
+        }
+
+        #logo {
+            float: left;
+        }
+
+        #left {
+            width: 755px;
+            background: url(./img/img_left.jpg) no-repeat;
+        }
+
+        #right {
+            float: right;
+            width: calc(1024px - 755px);
+            background-color: rgb(76, 70, 66);
+        }
+
+        #left, #right {
+            display: inline-block;
+            height: 336px;
+            color: #fff;
+        }
+
+        #left-text {
+            float: right;
+            text-align: right;
+            margin-right: 45px;
+            margin-top: 35px;
+        }
+
+        #right-text {
+            margin: 35px 30px 0;
+            line-height: 1.6em;
+        }
+
+        #right-text p {
+            text-indent: 2em;
+        }
+
+        #right-text ul>li {
+            list-style: none;
+        }
+
+        #down {
+            margin-top: 10px;
+            height: 280px;
+            background-color: #3C3C3C;
+        }
+
+        .box {
+            display: inline-block;
+            margin: 18px;
+            height: 240px;
+            width: 290px;
+            border: 3px solid #CCCCCC;
+            background: url(./img/bj.jpg) no-repeat;
+            text-align: center;
+        }
+
+        .box hr {
+            border: none;
+            border-top: 1px solid #777777;
+        }
+
+        .box h3 {
+            color: #CE0000;
+        }
+
+        .content {
+            width: 100%;
+            height: 100%;
+            float: right;
+        }
+
+        .box .content div {
+            margin-top: 30px;
+            font-size: 14px;
+        }
+
+        .square {
+            margin-top: 5px;
+            min-width: 30px;
+            min-height: 25px;
+            background-color: ivory;
+            border: 1px solid red;
+            color: red;
+            font-style: unset;
+            display: inline-block;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+<nav>
+    <img src="./img/logo.png" alt="logo" id="logo">
+    <ul>
+        <li>首页</li>
+        <li>个人简介</li>
+        <li>成长故事</li>
+        <li>感情经历</li>
+        <li>代表作</li>
+        <li>影迷注册</li>
+    </ul>
+</nav>
+
+<div id="left">
+    <div class="content">
+        <div id="left-text">
+            James Cameron
+            <h2 style="font-family: kaiti,fantasy;">詹姆斯&dot;卡梅隆 &nbsp;</h2><br>
+            记住永远不要用一个问题<br>
+            去搪塞另一个问题<br>
+            <br>
+            <i class="square">1</i>
+            <i class="square">2</i>
+            <i class="square">3</i>
+            <i class="square">4</i>
+        </div>
+    </div>
+</div>
+
+
+<div id="right">
+    <div class="content">
+        <div id="right-text">
+            <h3>内容介绍</h3>
+            INTRODUCTION
+            <ul>
+                <li>个人简介</li>
+                <li>成长故事</li>
+                <li>感情经历</li>
+                <li>代表作品</li>
+            </ul>
+            <br>
+            <p>他是人类电影史上不可或缺的闪亮之星，指引并推动着电影艺术的发展。</p>
+        </div>
+    </div>
+</div>
+
+<div id="down">
+    <div class="box">
+        <div class="content">
+            <div>
+                <h3>个人简介</h3>
+                <br>
+                <hr>
+                <br>
+                <p>早年经历</p>
+                <p>演艺经历</p>
+                <p>个人生活</p>
+                <p>人物评价</p>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="content">
+            <div>
+                <h3>感情经历</h3>
+                <br>
+                <hr>
+                <br>
+                <p>莎朗 · 威廉斯(Sharon williams)</p>
+                <p>吉尔 · 安妮 · 赫德(Gale Anne Huxrd)</p>
+                <p>凯瑟琳 · 毕格罗(Kathrym Bigelow)</p>
+                <p>琳达 · 汉密尔顿(Linda Hamilton)</p>
+                <p>苏西 · 埃米斯(Suzy Amis)</p>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="content">
+            <div>
+                <h3>主要作品</h3>
+                <br>
+                <hr>
+                <br>
+                <p>终结者</p>
+                <p>真实的谎言</p>
+                <p>泰坦尼克</p>
+                <p>阿凡达</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>
+        <a href="#">联系我们</a>
+        | <a href="#">收藏本站</a>
+        | <a href="#">人才招聘</a>
+        | <a href="#">开源社区</a>
+        | <a href="#">信息反馈</a>
+    </p>
+    <p>&copy; 郑州航空工业管理学院 智能工程学院</p>
+</footer>
+</body>
+</html>
